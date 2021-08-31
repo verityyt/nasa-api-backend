@@ -1,0 +1,21 @@
+{
+  "name": "nasa-api-wrapper",
+  "version": "1.0.0",
+  "description": "",
+  "main": "build/index.js",
+  "scripts": {
+    "start": "tsc && node ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^4.4.2"
+  },
+  "dependencies": {
+    "@types/express": "^4.17.13",
+    "@types/node-fetch": "^2.5.12",
+    "express": "^4.17.1",
+    "node-fetch": "^3.0.0"
+  }
+}
