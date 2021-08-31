@@ -2,26 +2,25 @@ import express from "express"
 import { apiKey } from "../../index.js"
 import fetch from "node-fetch";
 
-type Photo = {
+type ManifestPhoto = {
     sol: number,
     earth_date: string,
     total_photos: number,
     cameras: [string]
 }
 
-type Mainfest = {
-    FHAZ: Photo
-    RHAZ: Photo
-    MAST: Photo
-    CHEMCAM: Photo
-    MAHLI: Photo
-    MARDI: Photo
-    NAVCAM: Photo
-    PANCAM: Photo
-    MINITES: Photo
+type Manifest = {
+    FHAZ: ManifestPhoto
+    RHAZ: ManifestPhoto
+    MAST: ManifestPhoto
+    CHEMCAM: ManifestPhoto
+    MAHLI: ManifestPhoto
+    MARDI: ManifestPhoto
+    NAVCAM: ManifestPhoto
+    PANCAM: ManifestPhoto
 }
 
-const cameras = ["FHAZ", "RHAZ", "MAST", "CHEMCAM", "MAHLI", "MARDI", "NAVCAM", "PANCAM", "MINITES"]
+const cameras = ["FHAZ", "RHAZ", "MAST", "CHEMCAM", "MAHLI", "MARDI", "NAVCAM", "PANCAM"]
 
 const router = express.Router()
 
@@ -30,9 +29,9 @@ router.get("/", async (req, res) => {
 
     const response = await fetch(url)
     const json = await response.json() as any
-    const photos = json.photo_manifest.photos as [Photo]
+    const photos = json.photo_manifest.photos as ManifestPhoto[]
 
-    const result = {} as Mainfest
+    const result = {} as Manifest
 
     photos.forEach((data) => {
         cameras.forEach((value) => {
