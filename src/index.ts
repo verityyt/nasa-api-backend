@@ -13,5 +13,5 @@ app.use("/rover/manifest", roverManifestRoute)
 app.use("/rover/photos", roverPhotosRoute)
 
 app.listen(1337, () => {
-    console.log(`nasa-api-wrapper app listening at http://localhost:1337`)
+    console.log(`nasa-api-backend app listening at http://localhost:1337`)
 })
