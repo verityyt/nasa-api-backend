@@ -17,10 +17,9 @@ type Manifest = {
     MAHLI: ManifestPhoto
     MARDI: ManifestPhoto
     NAVCAM: ManifestPhoto
-    PANCAM: ManifestPhoto
 }
 
-const cameras = ["FHAZ", "RHAZ", "MAST", "CHEMCAM", "MAHLI", "MARDI", "NAVCAM", "PANCAM"]
+const cameras = ["FHAZ", "RHAZ", "MAST", "CHEMCAM", "MAHLI", "MARDI", "NAVCAM"]
 
 const router = express.Router()
 

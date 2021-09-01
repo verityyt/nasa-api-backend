@@ -5,7 +5,8 @@
   "main": "build/index.js",
   "scripts": {
     "start": "tsc && node .",
-    "startonly": "node ."
+    "startonly": "node .",
+    "compileonly": "tsc"
   },
   "type": "module",
   "keywords": [],
